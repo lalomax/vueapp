@@ -1,13 +1,19 @@
-<script>
+<script setup>
+import { ref } from 'vue';
+const count = ref(0);
 </script>
 <template>
-    <p class="red-text">MyCounter Component</p>
+    <h3>MyCounter Component</h3>
+    Reactive variable count: <b>{{ count }}</b>
+    <br /><br />
+    <button @click="count++">count+1</button>
 </template>
 <style scoped>
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
+
 .red-text {
     color: red;
 }
